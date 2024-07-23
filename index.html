@@ -359,43 +359,14 @@
             e.preventDefault();
         }, false);
 
-        // Mencegah Ctrl+U
+        // Mencegah kombinasi tombol untuk developer tools dan salinan
         document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                alert('Fungsi ini telah dinonaktifkan.');
-            }
-        });
-
-        // Mencegah Ctrl+C
-        document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey && e.key === 'c') {
-                e.preventDefault();
-                alert('Fungsi ini telah dinonaktifkan.');
-            }
-        });
-
-        // Mencegah Ctrl+S
-        document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey && e.key === 's') {
-                e.preventDefault();
-                alert('Fungsi ini telah dinonaktifkan.');
-            }
-        });
-
-        // Mencegah Ctrl+Shift+I (Alat Developer)
-        document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                alert('Fungsi ini telah dinonaktifkan.');
-            }
-        });
-
-        // Mencegah F12 (Alat Developer)
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'F12') {
-                e.preventDefault();
-                alert('Fungsi ini telah dinonaktifkan.');
+            if (e.ctrlKey || e.shiftKey || e.altKey) {
+                // Mencegah Ctrl+ kombinasi, Shift+ kombinasi, Alt+ kombinasi
+                const forbiddenKeys = ['u', 'c', 's', 'I', 'J', 'K', 'L'];
+                if (forbiddenKeys.includes(e.key) || e.key === 'F12') {
+                    e.preventDefault();
+                }
             }
         });
     </script>
