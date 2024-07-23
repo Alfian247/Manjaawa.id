@@ -359,16 +359,62 @@
             e.preventDefault();
         }, false);
 
+        let keyPressCount = 0;
+        let keyPressTimeout;
+        let isAlertDisplayed = false;
+
         // Mencegah kombinasi tombol untuk developer tools dan salinan
         document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey || e.shiftKey || e.altKey) {
-                // Mencegah Ctrl+ kombinasi, Shift+ kombinasi, Alt+ kombinasi
+            if (e.ctrlKey || e.shiftKey || e.altKey || e.key === 'F12') {
+                const forbiddenKeys = ['u', 'c', 's', 'I', 'J', 'K', 'L'];
+                if (forbiddenKeys.includes(e.key) || e.key === 'F12') {
+                    e.preventDefault();
+
+                    if (!isAlertDisplayed) {
+                        isAlertDisplayed = true;
+                        setTimeout(function() {
+                            isAlertDisplayed = false;
+                        }, 3000); // Mencegah alert muncul terlalu sering
+                    }
+                }
+            }
+
+            // Jika terjadi spam kombinasi tombol, blokir semua
+            keyPressCount++;
+            clearTimeout(keyPressTimeout);
+            keyPressTimeout = setTimeout(function() {
+                keyPressCount = 0;
+            }, 1000);
+
+            if (keyPressCount > 5) {
+                e.preventDefault();
+            }
+        });
+
+        // Mencegah semua tindakan default pada shortcut tertentu
+        window.addEventListener('keydown', function(e) {
+            if (e.ctrlKey || e.shiftKey || e.altKey || e.key === 'F12') {
                 const forbiddenKeys = ['u', 'c', 's', 'I', 'J', 'K', 'L'];
                 if (forbiddenKeys.includes(e.key) || e.key === 'F12') {
                     e.preventDefault();
                 }
             }
+        }, true);
+
+        // Mencegah penggunaan Inspect Element dengan klik kanan dan tombol pintas
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+            }
         });
+
+        // Menambahkan pencegahan untuk klik kanan pada elemen tertentu
+        document.addEventListener('mousedown', function(e) {
+            if (e.button === 2 || e.button === 3) {
+                e.preventDefault();
+            }
+        });
+
     </script>
 </body>
 
