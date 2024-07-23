@@ -21,6 +21,13 @@
   <!-- skin -->
   <link rel="stylesheet" href="skin/default.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style type="text/css">
+    img
+    {
+      user-select: none; /* Mencegah pemilihan */
+            -webkit-user-drag: none; /* Mencegah drag pada gambar */
+    }
+  </style>
 </head>
 
 <body>
@@ -164,7 +171,7 @@
         </div>
         <div class="col-md-3">
           <div class="team-member">
-            <figure class="member-photo"><img src="img/team/" alt="" /></figure>
+            <figure class="member-photo"><img src="img/team/member3.jpg" alt="" /></figure>
             <div class="team-detail">
               <h4>We Are Hiring</h4>
               <span>Admin</span>
@@ -173,7 +180,7 @@
         </div>
         <div class="col-md-3">
           <div class="team-member">
-            <figure class="member-photo"><img src="img/team/" alt="" /></figure>
+            <figure class="member-photo"><img src="img/team/member4.jpg" alt="" /></figure>
             <div class="team-detail">
               <h4>We Are Hiring</h4>
               <span>Helper</span>
@@ -342,6 +349,52 @@
   <script src="js/jquery.appear.js"></script>
   <script src="js/main.js"></script>
   <script src="contactform/contactform.js"></script>
+  <script>
+        // Mencegah klik kanan
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        }, false);
+
+        // Mencegah Ctrl+U
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                alert('Fungsi ini telah dinonaktifkan.');
+            }
+        });
+
+        // Mencegah Ctrl+C
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'c') {
+                e.preventDefault();
+                alert('Fungsi ini telah dinonaktifkan.');
+            }
+        });
+
+        // Mencegah Ctrl+S
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 's') {
+                e.preventDefault();
+                alert('Fungsi ini telah dinonaktifkan.');
+            }
+        });
+
+        // Mencegah Ctrl+Shift+I (Alat Developer)
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                alert('Fungsi ini telah dinonaktifkan.');
+            }
+        });
+
+        // Mencegah F12 (Alat Developer)
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12') {
+                e.preventDefault();
+                alert('Fungsi ini telah dinonaktifkan.');
+            }
+        });
+    </script>
 </body>
 
 </html>
