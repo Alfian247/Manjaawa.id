@@ -1,46 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manjaawa Citra Indonesia</title>
-    <link rel="stylesheet" href="style.css">
+  <!-- BASICS -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Manjaawa Citra Indonesia</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+  <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- skin -->
+  <link rel="stylesheet" href="skin/default.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    <header>
-        <h1>Manjaawa Citra Indonesia</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Manjaawa Citra Indonesia is a leading business in the industry, providing exceptional services and products to our valued customers.</p>
-    </section>
-    
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Service 1</li>
-            <li>Service 2</li>
-            <li>Service 3</li>
+  <section id="header" class="appear"></section>
+  <div class="navbar navbar-fixed-top" role="navigation" data-0="line-height:100px; height:100px; background-color:rgba(0,0,0,0.3);" data-300="line-height:60px; height:60px; background-color:rgba(0,0,0,1);">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="fa fa-bars color-white"></span>
+					</button>
+        <h1><a class="navbar-brand shin" href="index.html" data-0="line-height:90px;" data-300="line-height:50px;">Manjaawa Citra Indonesia
+					</a></h1>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav" data-0="margin-top:20px;" data-300="margin-top:5px;">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#section-about">About</a></li>
+          <li><a href="#section-works">Portfolio</a></li>
+          <li><a href="#section-contact">Contact</a></li>
         </ul>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: contact@manjaawa.co.id</p>
-        <p>Phone: +62 123 456 789</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Manjaawa Citra Indonesia. All rights reserved.</p>
-    </footer>
-    
+      </div>
+      <!--/.navbar-collapse -->
+    </div>
+  </div>
+  <div class="featured video-container">
+    <video autoplay muted loop playsinline>
+        <source src="img/parallax/video.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+        <div class="container">
+      <div class="row mar-bot40">
+        <div class="col-md-6 col-md-offset-3">
+
+          <div class="align-center">
+            <i class="mar-bot20" ><img src="img/logo/logo1.png"></i>
+            <h2 class="slogan" style="color:white;">Selamat Datang</h2>
+            <p style="font-weight: bold;">
+              Manjaawa Citra Indonesia adalah perusahaan herbal terkemuka yang berfokus pada produksi dan distribusi cabe jawa, sebuah tanaman herbal asli Indonesia yang dikenal dengan berbagai manfaat kesehatannya. Kami berkomitmen untuk menyediakan produk herbal berkualitas tinggi yang diproses dengan standar terbaik untuk memenuhi kebutuhan kesehatan masyarakat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- services -->
+  <section id="section-services" class="section pad-bot30 bg-white">
+    <div class="container">
+
+      <div class="row mar-bot40">
+        <div class="col-lg-4">
+          <div class="align-center">
+            <i class="fa fa-leaf fa-5x mar-bot20"></i>
+            <h4 class="text-bold">Cabai Jawa Puyang</h4>
+            <p>Cabe Jawa, atau yang dikenal dengan nama ilmiah Piper retrofractum, adalah salah satu produk unggulan kami.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="align-center">
+            <i class="fas fa-fish fa-5x mar-bot20"></i>
+            <h4 class="text-bold">Lobster Air Tawar</h4>
+            <p>Lobster tawar, juga dikenal sebagai crayfish atau crawfish, adalah jenis lobster yang hidup di air tawar. Lobster ini memiliki cangkang yang keras dan daging yang lembut serta lezat.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="align-center">
+            <i class="fas fa-fire fa-5x mar-bot20"></i>
+            <h4 class="text-bold">Arang Siap Pakai</h4>
+            <p>Arang siap pakai adalah bahan bakar yang terbuat dari kayu atau bahan organik lainnya yang dibakar dengan sedikit oksigen sehingga menghasilkan arang. 
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- spacer section:testimonial -->
+  <section id="parallax1" class="section" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="align-center">
+            <div class="testimonial pad-top40 pad-bot40 clearfix">
+              <h5>
+        				Kami berkomitmen untuk menyediakan produk-produk alami berkualitas tinggi yang dapat meningkatkan kesehatan dan kesejahteraan Anda. Berikut adalah beberapa produk unggulan kami yang berasal dari kekayaan alam Indonesia.
+        			</h5>
+              <br/>
+              <span class="author">&mdash; Alfian <a href="#">www.manjaawa.id</a></span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section id="section-about" class="section appear clearfix">
+    <div class="container">
+
+      <div class="row mar-bot40">
+        <div class="col-md-offset-3 col-md-6">
+          <div class="section-header">
+            <h2 class="section-heading animated" data-animation="bounceInUp">Team Kami</h2>
+            <p>Kita Adalah Kunci Sukses: Menggambarkan bahwa setiap anggota tim adalah bagian penting dari kesuksesan bisnis.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-center mar-bot40">
+        <div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img src="img/team/member1.jpg" alt="" /></figure>
+            <div class="team-detail">
+              <h4>Alfian</h4>
+              <span>Owner</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img src="img/team/member2.jpg " alt="" /></figure>
+            <div class="team-detail">
+              <h4>Alfiah</h4>
+              <span>Sekretaris</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img src="img/team/" alt="" /></figure>
+            <div class="team-detail">
+              <h4>We Are Hiring</h4>
+              <span>Admin</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="team-member">
+            <figure class="member-photo"><img src="img/team/" alt="" /></figure>
+            <div class="team-detail">
+              <h4>We Are Hiring</h4>
+              <span>Helper</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- /about -->
+
+  <!-- spacer section:stats -->
+  <section id="parallax1" class="section pad-top40 pad-bot40" data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="align-center pad-top40 pad-bot40">
+        <blockquote class="bigquote color-white">Solusi Herbal Indonesia</blockquote>
+        <p class="color-white">Manjaawa Citra Indonesia</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- section works -->
+  <section id="section-works" class="section appear clearfix">
+    <div class="container">
+
+      <div class="row mar-bot40">
+        <div class="col-md-offset-3 col-md-6">
+          <div class="section-header">
+            <h2 class="section-heading animated" data-animation="bounceInUp">Portfolio</h2>
+            <p>Selamat datang di halaman portofolio kami! Di sini, Anda dapat menemukan berbagai proyek, produk, dan inisiatif yang telah kami kembangkan untuk mempromosikan kesehatan dan kesejahteraan melalui herbal alami.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <nav id="filter" class="col-md-12 text-center">
+          <ul>
+            <li><a href="#" class="current btn-theme btn-small" data-filter="*">Semua</a></li>
+            <li><a href="#" class="btn-theme btn-small" data-filter=".produk">Produk</a></li>
+            <li><a href="#" class="btn-theme btn-small" data-filter=".perkebunan">Perkebunan</a></li>
+            <li><a href="#" class="btn-theme btn-small" data-filter=".kantor">Kantor</a></li>
+          </ul>
+        </nav>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="portfolio-items isotopeWrapper clearfix" id="3">
+
+              <article class="col-md-4 isotopeItem produk">
+                <div class="portfolio-item">
+                  <img src="img/produk/cabe jawa.jpg" alt="" />
+                  <div class="portfolio-desc align-center">
+                    <div class="folio-info">
+                      <h5><a href="#">Cabai Jawa</a></h5>
+                      <a href="img/produk/cabe jawa.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="col-md-4 isotopeItem produk">
+                <div class="portfolio-item">
+                  <img src="img/produk/cabe jawa harga.jpg" alt="" />
+                  <div class="portfolio-desc align-center">
+                    <div class="folio-info">
+                      <h5><a href="#">Cabai Jawa Harga</a></h5>
+                      <a href="img/produk/cabe jawa.jpg" class="fancybox"><i class="fa fa-plus fa-2x"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section id="parallax1" class="section parallax" data-stellar-background-ratio="0.5">
+    <div class="align-center pad-top40 pad-bot40">
+      <blockquote class="bigquote color-white">Kesehatan Alami untuk Semua</blockquote>
+      <p class="color-white">Manjaawa Citra Indonesia</p>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section id="section-contact" class="section appear clearfix">
+    <div class="container">
+
+      <div class="row mar-bot40">
+        <div class="col-md-offset-3 col-md-6">
+          <div class="section-header">
+            <h2 class="section-heading animated" data-animation="bounceInUp">Informasi Kontak</h2>
+            <p>Kami di Manjaawa Citra Indonesia siap melayani kebutuhan Anda dan menjawab segala pertanyaan Anda tentang produk-produk herbal kami. Jangan ragu untuk menghubungi kami melalui salah satu metode di bawah ini.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mar-bot40">
+        <div class="col-md-offset-3 col-md-6">
+          <div class="section-header">
+             <section class="contact-info">
+              <p><strong>Telepon:</strong><a href="callto:6285157792244">+62 21 1234 5678</a></p>
+              <p><strong>Email:</strong> <a href="mailto:info@manjaawacitra.co.id">info@manjaawacitra.co.id</a></p>
+              <p><strong>WhatsApp:</strong> <a href="https://wa.me/6285157792244">+62 8515 7792 244</a></p>
+              <p><strong>Alamat Kantor:</strong> Jl Kh Dewantara Dusun Ponjen Kidul , Kec. Kencong, Kabupaten Jember, Jawa Timur 68167 ,Indonesia</p>
+              </section>
+            <h2 class="section-heading animated" data-animation="bounceInUp"></h2>
+            <p>Terima kasih telah mengunjungi situs web kami. Kami berharap dapat segera berhubungan dengan Anda!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- map -->
+  <section id="section-map" class="clearfix">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2681.1229032271126!2d113.3687367!3d-8.2831564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd663002360ec59%3A0x59390e0abcf4d64a!2sManJaawa%20Citra%20Indonesia!5e1!3m2!1sid!2sid!4v1721623796677!5m2!1sid!2sid" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <section id="footer" class="section footer">
+    <div class="container">
+      <div class="row animated opacity mar-bot20" data-andown="fadeIn" data-animation="animation">
+        <div class="col-sm-12 align-center">
+          <ul class="social-network social-circle">
+            <li><a href="#" class="icoRss" title="Rss"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#" class="icoGoogle" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row align-center copyright">
+        <div class="col-sm-12">
+          <p>Copyright &copy; Manjaawa Citra Indonesia</p>
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Amoeba
+            -->
+            Designed by <a href="https://bootstrapmade.com/">Alfi Studio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+
+  <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.isotope.min.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
+  <script src="js/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="js/skrollr.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/jquery.localScroll.js"></script>
+  <script src="js/stellar.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/main.js"></script>
+  <script src="contactform/contactform.js"></script>
 </body>
+
 </html>
